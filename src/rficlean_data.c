@@ -155,6 +155,7 @@ void rficlean_data(FILE *input, FILE *output)
   printf (" Now RFIClean-ing (and 0-DM cleaning & downsampling, if asked for), and writing out the data...\n \n");
   istart = 0;
   iblock = 0;
+  if(iflip==1) printf (" Flipping the band \n");
   while ((ns=read_block(input,nbits,fblock,nsblk,byte_offset))>0 && iblock<nblocks) {
     byte_offset = byte_offset + (long) (naddt*nchans*(nbits/8.0));
     iblock = iblock + 1;
