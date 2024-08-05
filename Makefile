@@ -19,12 +19,12 @@ $(ODIR)/%.o: %.c  $(DEPS)
 	@mkdir -p $(BINDIR)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-$(BINDIR)/rficlean: $(OBJ)
+$(BINDIR)/rficlean_iarswap: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 .PHONY: install
-install:$(BINDIR)/rficlean
-	install $(BINDIR)/rficlean $(MYBIN)/
+install:$(BINDIR)/rficlean_iarswap
+	install $(BINDIR)/rficlean_iarswap $(MYBIN)/
 
 .PHONY: clean
 clean:
