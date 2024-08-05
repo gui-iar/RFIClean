@@ -148,7 +148,10 @@ int read_header(FILE *inputfile) /* includefile */
 
   /* add on last header string */
   totalbytes+=nbytes;
-
+  iflip = 0;
+  if (foff > 0) iflip=1 ; //we need to flip the band before writing
+//  fch1 = fch1 + foff*(nchans-1); //The IAR file and header already has the fmax as the highest frequency.
+  foff = -foff;
   /* return total number of bytes read */
   return totalbytes;
 }
