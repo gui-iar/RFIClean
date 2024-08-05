@@ -1,4 +1,5 @@
 # RFIClean
+### Modified version to swap the data and correct the header (foff from pos to neg) of IAR FIL files (update thanks to Yogesh Maan!)
 ### Mitigation of periodic and spiky RFI from filterbank data.
 
 RFIClean excises periodic RFI (broadband as well as narrow-band) in
