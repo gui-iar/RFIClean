@@ -319,7 +319,7 @@ void main (int argc, char *argv[])
     byte_offset = (long) ((long)(bl_start-1)*naddt*nchans*(nbits/8.0));
   }
   else if ((headersize=read_header(input))) {
-    printf (" Reading the sigproc-file header... \n");
+    printf (" Modified version to swap IAR files data \n Reading the sigproc-file header... \n");
     if(machine_id==8) machine_id=14; // change backend name from "PULSAR2000" to unknown
     totsamp = nsamples(inpfile,headersize,nbits,nifs,nchans);
     //printf("total samp: %ld\n",totsamp);
